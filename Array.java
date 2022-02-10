@@ -1,4 +1,5 @@
 
+import java.util.Arrays;
 class Array {
   private int[] items;
   private int count;
@@ -29,7 +30,19 @@ class Array {
     count--;
 
   }
+
+  public int indexOf(int item){
+    for (int i=0;i<count;i++){
+      if(items[i] == item){
+        return i;
+      }
+    }
+    return -1;
+    
+  }
+
   public void print(){
+    System.out.println(Arrays.toString(items));
     for(int i=0;i<count;i++){
       System.out.println(items[i]);
     }
