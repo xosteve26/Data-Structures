@@ -1,3 +1,4 @@
+import java.util.Arrays;
 public class LinkedList{
   
   private class Node{
@@ -96,6 +97,18 @@ public class LinkedList{
 
   public int size(){
     return count;
+  }
+
+  public int[] toArray(){
+    int[] array=new int[size()];
+    var index=0;
+    Node current=head;
+    while(current!=null){
+      array[index]=current.value;
+      current=current.next;
+      index++;
+    }
+    return array;
   }
 
   private boolean isEmpty(){
